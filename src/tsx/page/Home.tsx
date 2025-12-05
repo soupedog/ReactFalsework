@@ -1,19 +1,23 @@
-import React from 'react';
-import '../../../public/style/index.css'
-import '../../../public/style/index.scss'
-import '../../../public/style/index.less'
+import React from "react";
+import "../../../public/style/index.css"
+import "../../../public/style/index.scss"
+import "../../../public/style/index.less"
 
-function Home() {
+export interface HomeProps {
+    readonly text: string
+}
+
+function Home({text}: HomeProps) {
     return (
         <>
             <div className="text1">
-                Hello World! —————— css
+                {text} —————— css
             </div>
             <div className="text2">
-                Hello World! —————— less
+                {text} —————— less
             </div>
             <div className="text3">
-                Hello World! —————— scss
+                {text} —————— scss
             </div>
         </>
     );

@@ -6,7 +6,7 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-module.exports = {
+let config = {
     // 指定下列依赖从远端获取，不打包进 .js 文件
     externals: {
         // "react": "React",
@@ -17,13 +17,12 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json']
     },
-    mode: 'development', // development,production
-    devtool: 'eval-source-map',
     //入口文件的路径(可配多个，此处只配置了 "index" 实体)
     entry: {
         index: "./src/tsx/index.tsx"
     },
     output: {
+        publicPath: "/",
         path: path.join(__dirname, "/dist"),// distribution 的缩写
         filename: "./js/[name]-[chunkhash].js"
     },
@@ -117,3 +116,11 @@ module.exports = {
         }
     }
 }
+
+module.exports = (env, argv) => {
+    if (argv.mode === 'development') {
+        config.devtool = 'source-map';
+    }
+
+    return config;
+};
