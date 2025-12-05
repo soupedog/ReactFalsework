@@ -7,7 +7,7 @@ export interface HomeProps {
     readonly text: string
 }
 
-function Home({text}: HomeProps) {
+export default function Home({text}: HomeProps) {
     return (
         <>
             <div className="text1">
@@ -22,5 +22,3 @@ function Home({text}: HomeProps) {
         </>
     );
 }
-
-export default Home;
