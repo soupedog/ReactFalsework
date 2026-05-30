@@ -5,6 +5,8 @@ import '../styles/default.css'
 import '../styles/index.less'
 import '../styles/index.scss'
 
+import logoImage from "../assets/hero.png"
+
 export interface HomeProps {
     readonly text: string
 }
@@ -18,54 +20,57 @@ export default function Home({text}: HomeProps) {
 
     return (
         <>
-            <Row gutter={[8, 8]}>
+            <Row>
+                <img style={{margin: "0 auto"}} src={logoImage} alt={"logo"}></img>
+            </Row>
+            <Row gutter={[0, 0]}>
                 <Col span={8}>
                     <div className="text1">
-                        Hello World! —————— css
+                        css
                     </div>
                 </Col>
                 <Col span={8}>
                     <div className="text2">
-                        Hello World! —————— less
+                        less
                     </div>
                 </Col>
                 <Col span={8}>
                     <div className="text3">
-                        Hello World! —————— scss
+                        scss
                     </div>
                 </Col>
             </Row>
-            <Row gutter={[8, 8]}>
+            <Row gutter={[0, 0]}>
                 <Col span={8}>
                     <div className="text1">
-                        Hello World! —————— css
+                        css
                     </div>
                 </Col>
                 <Col span={8}>
                     <div className="text2">
-                        Hello World! —————— less
+                        less
                     </div>
                 </Col>
                 <Col span={8}>
                     <div className="text3">
-                        Hello World! —————— scss
+                        scss
                     </div>
                 </Col>
             </Row>
-            <Row gutter={[8, 8]}>
+            <Row gutter={[0, 0]}>
                 <Col span={8}>
                     <div className="text1">
-                        Hello World! —————— css
+                        css
                     </div>
                 </Col>
                 <Col span={8}>
                     <div className="text2">
-                        Hello World! —————— less
+                        less
                     </div>
                 </Col>
                 <Col span={8}>
                     <div className="text3">
-                        Hello World! —————— scss
+                        scss
                     </div>
                 </Col>
             </Row>
