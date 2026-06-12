@@ -15,7 +15,7 @@ export default function Home({text}: HomeProps) {
 
     useEffect(() => {
         // 依赖静态值表示仅初始化时调用一次
-        console.log(text)
+        document.title = "主页";
     }, [text]);
 
     return (
