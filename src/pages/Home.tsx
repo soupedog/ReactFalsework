@@ -1,8 +1,8 @@
 import {useEffect} from 'react';
 import {Col, Row} from "antd";
 
-import '../styles/index.less'
-import '../styles/index.scss'
+import './Home.less'
+import './Home.scss'
 
 import logoImage from "../assets/hero.png"
 

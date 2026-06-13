@@ -1,5 +1,5 @@
 /*用 modern-normalize 统一浏览器默认样式*/
-@import 'modern-normalize';
+@import '../node_modules/modern-normalize';
 
 .backgroundTransparent {
     background-color: transparent;
