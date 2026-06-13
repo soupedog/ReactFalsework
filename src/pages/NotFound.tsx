@@ -24,7 +24,9 @@ export default function NotFound({delayTime}: NotFoundProps) {
             extra={
                 <Button type="primary" onClick={() => {
                     navigate("/", {replace: false});
-                }}>立即返回主页</Button>
+                }}>
+                    立即返回主页
+                </Button>
             }
         />
     );

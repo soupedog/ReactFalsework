@@ -3,32 +3,6 @@ body {
     margin: 0 !important;
 }
 
-.floatToLeft {
-    display: inline-block;
-    float: left;
-}
-
-.floatToRight {
-    display: inline-block;
-    float: right;
-}
-
-.clearBoth {
-    clear: both;
-}
-
-.clearFix:after {
-    content: "";
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both
-}
-
-.clearFix {
-    *zoom: 1
-}
-
 .backgroundTransparent {
     background-color: transparent;
 }
