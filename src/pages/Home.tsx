@@ -1,7 +1,6 @@
 import {useEffect} from 'react';
 import {Col, Row} from "antd";
 
-import '../styles/default.css'
 import '../styles/index.less'
 import '../styles/index.scss'
 

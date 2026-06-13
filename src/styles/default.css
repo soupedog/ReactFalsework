@@ -1,7 +1,5 @@
-@charset "utf-8";
-body {
-    margin: 0 !important;
-}
+/*用 modern-normalize 统一浏览器默认样式*/
+@import 'modern-normalize';
 
 .backgroundTransparent {
     background-color: transparent;
