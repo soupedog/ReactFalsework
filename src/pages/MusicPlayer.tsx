@@ -1,23 +1,25 @@
 import APlayer from 'aplayer-ts'
 import 'aplayer-ts/src/css/base.css'
-import {useEffect, useRef} from "react";
+import {useEffect, useRef} from 'react';
 
 function MusicPlayer() {
     // playerRef.current 是永久变量，这样才能在方法外被引用
     const playerRef = useRef<APlayer>(null);
 
     useEffect(() => {
-        // 依赖静态值表示仅初始化时调用一次
-        document.title = "音乐播放器";
+        document.title = '音乐播放器';
 
         // 初始化播放器
         playerRef.current = APlayer().init({
+            // undefined 是不要歌词  lrcType=1 时需要 audio[lrc] 给出歌词字符串文本
+            lrcType: undefined,
             container: document.getElementById('playerContainer')!,
             audio: [{
                 name: '歌曲名称',
                 artist: '歌手名称',
-                url: 'song.mp3',
-                cover: 'cover.jpg'
+                url: 'https://www.xavierwang.cn/static/bgm/Tranquility(Short ver) - Anly & 澤野弘之.mp3',
+                cover: 'cover.jpg',
+                lrc: undefined
             }],
             volume: 1,        // 音量 0-1
             theme: '#b7daff'    // 主题色
@@ -36,10 +38,12 @@ function MusicPlayer() {
             // 主动指向 null，给垃圾回收提供帮助
             playerRef.current = null;
         };
-    });
+
+        // 依赖静态值表示仅初始化时调用一次
+    }, []);
 
     return (
-        <div id={"playerContainer"}/>
+        <div id={'playerContainer'}/>
     )
 }
 
