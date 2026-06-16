@@ -8,12 +8,10 @@ export default function Goods() {
 
     useEffect(() => {
         // 必须新创建对象，沿用 searchParams 的引用会判定为未变化，不会进行数据更新
-        // 导致一个问题：有多少个 QueryString 都要挨个检查
-        let params = {};
         if (keyword) {
-            // @ts-ignore
-            params.keyword = keyword;
-            setSearchParams(params);
+            const nextParams = new URLSearchParams(searchParams);
+            nextParams.set('keyword', keyword);
+            setSearchParams(nextParams);
         }
     }, [keyword]);
     // 仅当 keyword 发生变化时触发
